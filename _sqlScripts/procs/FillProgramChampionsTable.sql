@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.FillProgramChampionsTable) is not null
+	drop procedure dbo.FillProgramChampionsTable
+
+
+
+
 CREATE PROCEDURE [dbo].[FillProgramChampionsTable]
     @EventID INT,
     @MinSmallTeams INT,
@@ -70,3 +76,5 @@ AS
     END
 
 
+
+-- grant execute on FillProgramChampionsTable to myUser

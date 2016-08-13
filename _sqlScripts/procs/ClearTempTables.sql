@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.ClearTempTables) is not null
+	drop procedure dbo.ClearTempTables
+
+
+
+
 CREATE PROCEDURE [dbo].[ClearTempTables]
     @password nvarchar(50)
 AS 
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on ClearTempTables to myUser

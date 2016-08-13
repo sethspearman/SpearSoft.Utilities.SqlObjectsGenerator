@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryGetEventTurnJudgeScores) is not null
+	drop view dbo.qryGetEventTurnJudgeScores
+
+
+
+
 CREATE VIEW dbo.qryGetEventTurnJudgeScores
 AS  
     SELECT dbo.fnGetLevelMaxValue2 (dbo.fnGetLevelID (Null,et.EventTurnID,Null),Null, et.EventTurnID ) as MaxValue 
@@ -14,3 +20,5 @@ AS
 		INNER JOIN tblJudges j ON etj.JudgeID = j.JudgeID
 
 
+
+-- grant execute on qryGetEventTurnJudgeScores to myUser

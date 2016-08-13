@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetEventTurnJudgeRawScore) is not null
+	drop procedure dbo.usp_GetEventTurnJudgeRawScore
+
+
+
+
 
 CREATE PROCEDURE [dbo].[usp_GetEventTurnJudgeRawScore]
     @EventTurnJudgeID INT,
@@ -15,3 +21,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetEventTurnJudgeRawScore to myUser

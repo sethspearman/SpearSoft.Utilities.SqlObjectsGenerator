@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.CreateEventTurn) is not null
+	drop procedure dbo.CreateEventTurn
+
+
+
+
 CREATE PROCEDURE [dbo].[CreateEventTurn]
     @EventTurnID INT,
     @JudgeID INT,
@@ -228,3 +234,5 @@ AS
     END
 
 
+
+-- grant execute on CreateEventTurn to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.vw_GetTabularScoringDataGenericWithTotals) is not null
+	drop view dbo.vw_GetTabularScoringDataGenericWithTotals
+
+
+
+
 CREATE	VIEW [dbo].[vw_GetTabularScoringDataGenericWithTotals] 
 AS
 	SELECT 
@@ -65,3 +71,5 @@ AS
         ,CAST((Criteria_17 + Criteria_17_Exec) AS DECIMAL(9,4)) AS Criteria_17_Total 
     FROM vw_GetTabularScoringDataGeneric
 
+
+-- grant execute on vw_GetTabularScoringDataGenericWithTotals to myUser

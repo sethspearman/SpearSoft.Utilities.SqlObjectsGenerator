@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_levels) is not null
+	drop procedure dbo.usp_insert_update_levels
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_insert_update_levels]
     @Name NVARCHAR(20),
     @Description NVARCHAR(255),
@@ -21,3 +27,5 @@ AS
 
     END
 
+
+-- grant execute on usp_insert_update_levels to myUser

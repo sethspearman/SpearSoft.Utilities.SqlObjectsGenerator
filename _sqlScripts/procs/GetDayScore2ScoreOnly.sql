@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetDayScore2ScoreOnly) is not null
+	drop procedure dbo.GetDayScore2ScoreOnly
+
+
+
+
 CREATE PROCEDURE [dbo].[GetDayScore2ScoreOnly]
     @RegistrationDivisionID INT,
     @EventDay TINYINT,
@@ -28,3 +34,5 @@ AS
     END
 
 
+
+-- grant execute on GetDayScore2ScoreOnly to myUser

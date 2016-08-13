@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetEventScorePercentPerfection) is not null
+	drop procedure dbo.usp_GetEventScorePercentPerfection
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetEventScorePercentPerfection]
     @RegistrationDivisionID INT,
     @EventDay TINYINT,
@@ -21,3 +27,5 @@ AS
 
     END
 
+
+-- grant execute on usp_GetEventScorePercentPerfection to myUser

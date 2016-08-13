@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetScoresheetLevelMaxValue) is not null
+	drop procedure dbo.usp_GetScoresheetLevelMaxValue
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetScoresheetLevelMaxValue]
     @LevelID INT,
     @EventTurnID INT,
@@ -14,3 +20,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetScoresheetLevelMaxValue to myUser

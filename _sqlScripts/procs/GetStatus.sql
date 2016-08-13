@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetStatus) is not null
+	drop procedure dbo.GetStatus
+
+
+
+
 CREATE PROCEDURE [dbo].[GetStatus]
     @PanelID INT,
     @Key nvarchar(100),
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on GetStatus to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.getScoringCriteriaLevelMaxValue) is not null
+	drop procedure dbo.getScoringCriteriaLevelMaxValue
+
+
+
+
 CREATE PROCEDURE [dbo].[getScoringCriteriaLevelMaxValue]
     @EventTurnJudgeID INT,
 	@JudgingCriteriaID INT,
@@ -15,3 +21,5 @@ AS
     END
 
 
+
+-- grant execute on getScoringCriteriaLevelMaxValue to myUser

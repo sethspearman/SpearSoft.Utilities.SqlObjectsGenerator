@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetDay1EventTurnID) is not null
+	drop procedure dbo.usp_GetDay1EventTurnID
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetDay1EventTurnID] 
 	@Day2EventTurnID INT,
 	@Result INT OUTPUT
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetDay1EventTurnID to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.getEventTurnDeductionJudgeID) is not null
+	drop procedure dbo.getEventTurnDeductionJudgeID
+
+
+
+
 CREATE PROCEDURE [dbo].[getEventTurnDeductionJudgeID] 
 	@EventTurnID INT,
 	@Result INT OUTPUT
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on getEventTurnDeductionJudgeID to myUser

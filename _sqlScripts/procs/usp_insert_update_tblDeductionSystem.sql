@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_tblDeductionSystem) is not null
+	drop procedure dbo.usp_insert_update_tblDeductionSystem
+
+
+
+
 CREATE PROCEDURE dbo.usp_insert_update_tblDeductionSystem
 	@DeductionID int,
     @ScoringCriteriaTypeID int,
@@ -56,3 +62,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_tblDeductionSystem to myUser

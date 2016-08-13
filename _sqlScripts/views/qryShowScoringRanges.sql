@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryShowScoringRanges) is not null
+	drop view dbo.qryShowScoringRanges
+
+
+
+
 CREATE VIEW dbo.qryShowScoringRanges
 AS
 
@@ -22,3 +28,5 @@ AS
 		ON jc.ScoringCriteriaTypeID = sct.ScoringCriteriaTypeID
 			
 
+
+-- grant execute on qryShowScoringRanges to myUser

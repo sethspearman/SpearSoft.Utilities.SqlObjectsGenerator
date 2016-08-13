@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryGetEventTurnDeductionInfo) is not null
+	drop view dbo.qryGetEventTurnDeductionInfo
+
+
+
+
 CREATE VIEW dbo.qryGetEventTurnDeductionInfo
 AS  
 
@@ -11,3 +17,5 @@ SELECT  dbo.tblEventTurns.EventTurnID,
             INNER JOIN dbo.tblEventTurnJudgeDeductions ON dbo.tblEventTurnJudge.EventTurnJudgeID = dbo.tblEventTurnJudgeDeductions.EventTurnJudgeID
 
 
+
+-- grant execute on qryGetEventTurnDeductionInfo to myUser

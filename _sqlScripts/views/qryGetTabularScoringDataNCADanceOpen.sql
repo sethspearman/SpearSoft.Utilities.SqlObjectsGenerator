@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.qryGetTabularScoringDataNCADanceOpen) is not null
+	drop view dbo.qryGetTabularScoringDataNCADanceOpen
+
+
+
  
 CREATE	VIEW [dbo].[qryGetTabularScoringDataNCADanceOpen] 
 AS
@@ -53,3 +59,5 @@ AS
 		) as pvt      
    
 
+
+-- grant execute on qryGetTabularScoringDataNCADanceOpen to myUser

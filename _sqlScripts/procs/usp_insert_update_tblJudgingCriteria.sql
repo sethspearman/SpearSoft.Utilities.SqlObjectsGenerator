@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_tblJudgingCriteria) is not null
+	drop procedure dbo.usp_insert_update_tblJudgingCriteria
+
+
+
+
 CREATE PROCEDURE dbo.usp_insert_update_tblJudgingCriteria
 	@JudgingCriteriaID int,
     @ScoringCriteriaTypeID int,
@@ -88,3 +94,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_tblJudgingCriteria to myUser

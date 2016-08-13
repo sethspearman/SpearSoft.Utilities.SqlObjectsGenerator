@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_SetupCategoryJudge) is not null
+	drop procedure dbo.usp_SetupCategoryJudge
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_SetupCategoryJudge]
     @EventPanelID INT,
     @JudgeID INT,
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on usp_SetupCategoryJudge to myUser

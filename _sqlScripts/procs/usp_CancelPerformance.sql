@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_CancelPerformance) is not null
+	drop procedure dbo.usp_CancelPerformance
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_CancelPerformance]
     @EventTurnID INT,
 	@Result MONEY OUTPUT
@@ -50,3 +56,5 @@ AS
     END
 
 
+
+-- grant execute on usp_CancelPerformance to myUser

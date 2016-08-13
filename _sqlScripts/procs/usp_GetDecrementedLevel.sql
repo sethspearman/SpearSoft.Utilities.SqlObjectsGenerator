@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetDecrementedLevel) is not null
+	drop procedure dbo.usp_GetDecrementedLevel
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetDecrementedLevel]
     @ScoringCriteriaTypeID INT, 
     @CurrentSortOrder TINYINT,
@@ -42,3 +48,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetDecrementedLevel to myUser

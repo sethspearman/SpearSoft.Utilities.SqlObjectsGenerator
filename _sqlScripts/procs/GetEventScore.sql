@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetEventScore) is not null
+	drop procedure dbo.GetEventScore
+
+
+
+
 CREATE PROCEDURE [dbo].[GetEventScore]
     @RegistrationDivisionID INT,
     @EventDay TINYINT,
@@ -21,3 +27,5 @@ AS
 
     END
 
+
+-- grant execute on GetEventScore to myUser

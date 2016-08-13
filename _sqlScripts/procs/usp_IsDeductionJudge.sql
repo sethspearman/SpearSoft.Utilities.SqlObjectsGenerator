@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_IsDeductionJudge) is not null
+	drop procedure dbo.usp_IsDeductionJudge
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_IsDeductionJudge]
     @EventTurnID INT,
     @JudgeID INT,
@@ -27,3 +33,5 @@ AS
     END
 
 
+
+-- grant execute on usp_IsDeductionJudge to myUser

@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.tblScoringCriteriaTypeLevels) is not null
+	drop view dbo.tblScoringCriteriaTypeLevels
+
+
+
  
 CREATE	VIEW [dbo].[tblScoringCriteriaTypeLevels] 
 AS
@@ -9,3 +15,5 @@ FROM tblJudgingCriteria jc
         ON jc.JudgingCriteriaID = jcms.JudgingCriteriaID
         
 
+
+-- grant execute on tblScoringCriteriaTypeLevels to myUser

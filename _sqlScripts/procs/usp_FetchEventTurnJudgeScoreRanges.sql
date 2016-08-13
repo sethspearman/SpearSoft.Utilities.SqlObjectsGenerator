@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_FetchEventTurnJudgeScoreRanges) is not null
+	drop procedure dbo.usp_FetchEventTurnJudgeScoreRanges
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_FetchEventTurnJudgeScoreRanges]
     @EventTurnJudgeID INT,
     @JudgingCriteriaID INT,
@@ -40,3 +46,5 @@ AS
     END
 
 
+
+-- grant execute on usp_FetchEventTurnJudgeScoreRanges to myUser

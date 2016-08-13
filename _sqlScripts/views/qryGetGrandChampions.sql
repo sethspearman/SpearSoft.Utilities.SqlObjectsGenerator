@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryGetGrandChampions) is not null
+	drop view dbo.qryGetGrandChampions
+
+
+
+
 CREATE VIEW dbo.qryGetGrandChampions
 AS  SELECT  td.DivisionID,
             trd.RegistrationDivisionID,
@@ -16,3 +22,5 @@ AS  SELECT  td.DivisionID,
     WHERE   ( td.ScoringCriteriaTypeID = 2 )
 
 
+
+-- grant execute on qryGetGrandChampions to myUser

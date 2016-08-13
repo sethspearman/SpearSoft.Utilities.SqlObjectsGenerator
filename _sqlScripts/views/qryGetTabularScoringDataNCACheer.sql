@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.qryGetTabularScoringDataNCACheer) is not null
+	drop view dbo.qryGetTabularScoringDataNCACheer
+
+
+
  
 CREATE	VIEW [dbo].[qryGetTabularScoringDataNCACheer] 
 AS
@@ -61,3 +67,5 @@ AS
 		) as pvt      
    
 
+
+-- grant execute on qryGetTabularScoringDataNCACheer to myUser

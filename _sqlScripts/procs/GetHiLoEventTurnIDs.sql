@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetHiLoEventTurnIDs) is not null
+	drop procedure dbo.GetHiLoEventTurnIDs
+
+
+
+
 CREATE PROCEDURE [dbo].[GetHiLoEventTurnIDs]
 	@EventTurnID INT,
 	@HiID INT OUTPUT,
@@ -52,3 +58,5 @@ AS
     END
 
 
+
+-- grant execute on GetHiLoEventTurnIDs to myUser

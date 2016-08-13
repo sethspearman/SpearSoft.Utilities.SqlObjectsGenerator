@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.trg_UpdatesScoresFromPivot) is not null
+	drop trigger dbo.trg_UpdatesScoresFromPivot
+
+
+
+
 CREATE TRIGGER [dbo].[trg_UpdatesScoresFromPivot] ON [dbo].usys_tblPivotedScoringData
     FOR UPDATE
 AS      
@@ -299,3 +305,5 @@ AS
     WHERE i.Criteria_17 <> d.Criteria_17 AND tblEventTurnJudgeScores.JudgingCriteriaID = @JudgingCriteriaID    
     
 
+
+-- grant execute on trg_UpdatesScoresFromPivot to myUser

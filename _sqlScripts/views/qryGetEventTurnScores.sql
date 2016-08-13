@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryGetEventTurnScores) is not null
+	drop view dbo.qryGetEventTurnScores
+
+
+
+
 CREATE VIEW dbo.qryGetEventTurnScores
 AS  
     SELECT dbo.fnGetLevelMaxValue2 (dbo.fnGetLevelID (Null,et.EventTurnID,Null),Null, et.EventTurnID ) as MaxValue 
@@ -19,3 +25,5 @@ AS
     FROM tblEventTurns et
 
 
+
+-- grant execute on qryGetEventTurnScores to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_tblEventPanelTypes) is not null
+	drop procedure dbo.usp_insert_update_tblEventPanelTypes
+
+
+
+
 CREATE PROCEDURE dbo.usp_insert_update_tblEventPanelTypes
     @EventPanelTypeID int,	
 	@Name nvarchar(50),
@@ -39,3 +45,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_tblEventPanelTypes to myUser

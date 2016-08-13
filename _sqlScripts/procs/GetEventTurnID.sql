@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetEventTurnID) is not null
+	drop procedure dbo.GetEventTurnID
+
+
+
+
 CREATE PROCEDURE [dbo].[GetEventTurnID]
     @RegistrationDivisionID INT,
     @EventDay TINYINT,
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on GetEventTurnID to myUser

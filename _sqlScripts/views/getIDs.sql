@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.getIDs) is not null
+	drop view dbo.getIDs
+
+
+
 create view getIDs
 as
 
@@ -27,3 +33,5 @@ as
 
 
 
+
+-- grant execute on getIDs to myUser

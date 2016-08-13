@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetEventPanelRound) is not null
+	drop procedure dbo.GetEventPanelRound
+
+
+
+
 CREATE PROCEDURE [dbo].[GetEventPanelRound]
     @EventPanelID INT,
 	@Result TINYINT OUTPUT
@@ -16,3 +22,5 @@ AS
     END
 
 
+
+-- grant execute on GetEventPanelRound to myUser

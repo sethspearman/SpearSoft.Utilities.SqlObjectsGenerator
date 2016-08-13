@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_AllCategoriesCompleted) is not null
+	drop procedure dbo.usp_AllCategoriesCompleted
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_AllCategoriesCompleted]
     @EventTurnID INT,
 	@AllCategoriesCompleted bit OUTPUT
@@ -68,3 +74,5 @@ AS
     END
 
 
+
+-- grant execute on usp_AllCategoriesCompleted to myUser

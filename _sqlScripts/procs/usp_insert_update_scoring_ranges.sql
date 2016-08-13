@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_scoring_ranges) is not null
+	drop procedure dbo.usp_insert_update_scoring_ranges
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_insert_update_scoring_ranges]
     @JudgingCriteriaID INT,
     @LevelID INT,
@@ -23,3 +29,5 @@ AS
                     WHERE JudgingCriteriaID=@JudgingCriteriaID AND LevelID=@LevelID AND ToggleValue=@ToggleValue       
     END
 
+
+-- grant execute on usp_insert_update_scoring_ranges to myUser

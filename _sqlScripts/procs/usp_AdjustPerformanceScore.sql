@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_AdjustPerformanceScore) is not null
+	drop procedure dbo.usp_AdjustPerformanceScore
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_AdjustPerformanceScore] @EventTurnID       INT,
                                                     @JudgingCriteriaID INT
 AS
@@ -74,3 +80,5 @@ AS
   END
 
 
+
+-- grant execute on usp_AdjustPerformanceScore to myUser

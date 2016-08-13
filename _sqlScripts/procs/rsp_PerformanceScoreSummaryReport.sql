@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.rsp_PerformanceScoreSummaryReport) is not null
+	drop procedure dbo.rsp_PerformanceScoreSummaryReport
+
+
+
  
 CREATE PROCEDURE [dbo].[rsp_PerformanceScoreSummaryReport] 
     @EventTurnID INT
@@ -14,3 +20,5 @@ BEGIN
 
 END
 
+
+-- grant execute on rsp_PerformanceScoreSummaryReport to myUser

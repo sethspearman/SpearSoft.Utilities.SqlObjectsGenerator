@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.trg_divisioncodes_i_divisioncode_specialUNQ) is not null
+	drop trigger dbo.trg_divisioncodes_i_divisioncode_specialUNQ
+
+
+
+
 CREATE TRIGGER [dbo].[trg_divisioncodes_i_divisioncode_specialUNQ] ON [dbo].[tblDivisions]
     FOR INSERT, UPDATE
 AS
@@ -15,3 +21,5 @@ AS
         END
 
 
+
+-- grant execute on trg_divisioncodes_i_divisioncode_specialUNQ to myUser

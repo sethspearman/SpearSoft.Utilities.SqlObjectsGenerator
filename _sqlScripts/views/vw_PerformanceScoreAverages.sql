@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.vw_PerformanceScoreAverages) is not null
+	drop view dbo.vw_PerformanceScoreAverages
+
+
+
+
 CREATE	VIEW [dbo].[vw_PerformanceScoreAverages] 
 AS
 SELECT etj.EventTurnID
@@ -26,3 +32,5 @@ WHERE etj.EventTurnJudgeID  IN
 GROUP BY etj.EventTurnID, etjs.JudgingCriteriaID, jc.ScoringCategoryID 
 		 
 
+
+-- grant execute on vw_PerformanceScoreAverages to myUser

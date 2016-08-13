@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.vw_GetTabularScoringDataGeneric) is not null
+	drop view dbo.vw_GetTabularScoringDataGeneric
+
+
+
+
 CREATE	VIEW [dbo].[vw_GetTabularScoringDataGeneric] 
 AS
 SELECT 
@@ -51,3 +57,5 @@ SELECT
             ON etj.JudgeID=j.JudgeID
     WHERE etj.JudgeID NOT IN (SELECT JudgeId FROM dbo.fnGetEventTurnDeductionJudgeIDs(etj.EventTurnID))
 
+
+-- grant execute on vw_GetTabularScoringDataGeneric to myUser

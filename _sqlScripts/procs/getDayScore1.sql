@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.getDayScore1) is not null
+	drop procedure dbo.getDayScore1
+
+
+
+
 CREATE PROCEDURE [dbo].[getDayScore1]
 	@EventTurnID INT,
 	@Result MONEY OUTPUT
@@ -17,3 +23,5 @@ AS
     END
 
 
+
+-- grant execute on getDayScore1 to myUser

@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.qryGetALLScoringData) is not null
+	drop view dbo.qryGetALLScoringData
+
+
+
  
 CREATE	VIEW [dbo].[qryGetALLScoringData] 
 AS
@@ -42,3 +48,5 @@ AS
         INNER JOIN tblScoringCategories sc
             ON jc.ScoringCategoryID=sc.ScoringCategoryID
 
+
+-- grant execute on qryGetALLScoringData to myUser

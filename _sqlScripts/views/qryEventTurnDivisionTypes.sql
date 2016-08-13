@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryEventTurnDivisionTypes) is not null
+	drop view dbo.qryEventTurnDivisionTypes
+
+
+
+
 CREATE VIEW dbo.qryEventTurnDivisionTypes
 AS  SELECT  dbo.tblEventTurns.EventTurnID,
             dbo.tblDivisions.EventPanelTypeID
@@ -8,3 +14,5 @@ AS  SELECT  dbo.tblEventTurns.EventTurnID,
             INNER JOIN dbo.tblEventTurns ON dbo.tblRegistrationDivisions.RegistrationDivisionID = dbo.tblEventTurns.RegistrationDivisionID
 
 
+
+-- grant execute on qryEventTurnDivisionTypes to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_tblJudgingCriteriaMaxScores) is not null
+	drop procedure dbo.usp_insert_update_tblJudgingCriteriaMaxScores
+
+
+
+
 CREATE PROCEDURE dbo.usp_insert_update_tblJudgingCriteriaMaxScores
 	@JudgingCriteriaMaxScoreID int,
 	@LevelID int,
@@ -62,3 +68,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_tblJudgingCriteriaMaxScores to myUser

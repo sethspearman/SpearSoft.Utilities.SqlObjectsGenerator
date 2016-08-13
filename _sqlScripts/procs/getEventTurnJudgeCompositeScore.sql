@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.getEventTurnJudgeCompositeScore) is not null
+	drop procedure dbo.getEventTurnJudgeCompositeScore
+
+
+
+
 CREATE PROCEDURE [dbo].[getEventTurnJudgeCompositeScore]
 	@EventTurnJudgeID INT,
 	@Result MONEY OUTPUT
@@ -15,3 +21,5 @@ AS
     END
 
 
+
+-- grant execute on getEventTurnJudgeCompositeScore to myUser

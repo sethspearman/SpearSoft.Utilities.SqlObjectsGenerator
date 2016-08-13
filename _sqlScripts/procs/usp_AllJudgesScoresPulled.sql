@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_AllJudgesScoresPulled) is not null
+	drop procedure dbo.usp_AllJudgesScoresPulled
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_AllJudgesScoresPulled]
     @EventTurnID INT,
 	@AllJudgesScoresPulled bit OUTPUT
@@ -49,3 +55,5 @@ AS
     END
 
 
+
+-- grant execute on usp_AllJudgesScoresPulled to myUser

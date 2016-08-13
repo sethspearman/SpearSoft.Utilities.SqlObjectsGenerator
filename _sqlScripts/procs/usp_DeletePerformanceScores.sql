@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_DeletePerformanceScores) is not null
+	drop procedure dbo.usp_DeletePerformanceScores
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_DeletePerformanceScores]
 	@EventTurnID INT,
     @Result MONEY OUTPUT
@@ -38,3 +44,5 @@ AS
     END
 
 
+
+-- grant execute on usp_DeletePerformanceScores to myUser

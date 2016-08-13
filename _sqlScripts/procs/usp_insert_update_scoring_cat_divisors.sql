@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_scoring_cat_divisors) is not null
+	drop procedure dbo.usp_insert_update_scoring_cat_divisors
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_insert_update_scoring_cat_divisors]
     @ScoringCategoryID INT,
     @LevelID INT,
@@ -18,3 +24,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_scoring_cat_divisors to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.vw_GetTabularScoringAVGSDataGeneric) is not null
+	drop view dbo.vw_GetTabularScoringAVGSDataGeneric
+
+
+
+
 CREATE	VIEW [dbo].[vw_GetTabularScoringAVGSDataGeneric] 
 AS
     SELECT 
@@ -48,3 +54,5 @@ AS
             on rd.RegistrationID = r.RegistrationID   
 
 
+
+-- grant execute on vw_GetTabularScoringAVGSDataGeneric to myUser

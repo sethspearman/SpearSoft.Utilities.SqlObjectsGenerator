@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetExecScore) is not null
+	drop procedure dbo.usp_GetExecScore
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetExecScore]
     @JudgingCriteriaID INT,
     @EventTurnJudgeID INT,
@@ -20,3 +26,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetExecScore to myUser

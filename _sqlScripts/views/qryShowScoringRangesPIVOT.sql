@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryShowScoringRangesPIVOT) is not null
+	drop view dbo.qryShowScoringRangesPIVOT
+
+
+
+
 CREATE VIEW dbo.qryShowScoringRangesPIVOT
 AS
 	SELECT CriteriaName, [Order],LevelID, [Name] as LevelName, ScoreSheet
@@ -18,3 +24,5 @@ AS
 			)
 		) AS PVT
 
+
+-- grant execute on qryShowScoringRangesPIVOT to myUser

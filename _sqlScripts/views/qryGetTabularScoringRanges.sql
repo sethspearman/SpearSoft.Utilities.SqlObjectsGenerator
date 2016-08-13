@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.qryGetTabularScoringRanges) is not null
+	drop view dbo.qryGetTabularScoringRanges
+
+
+
  
 CREATE	VIEW [dbo].[qryGetTabularScoringRanges] 
 AS
@@ -64,3 +70,5 @@ FROM   (SELECT sct.ScoringCriteriaType                                          
     
    
 
+
+-- grant execute on qryGetTabularScoringRanges to myUser

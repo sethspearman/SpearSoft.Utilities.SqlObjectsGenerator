@@ -46,6 +46,23 @@ namespace SpearSoft.Utilities.SqlObjectsGenerator
                 var objectScript = sqlObject.Definition;
                 var footerContent = FileHandler.GetTemplate(objectType, footer);
 
+                var searchReplaceStrings = new List<SearchReplaceString>
+                {
+                    new SearchReplaceString()
+                    {
+                        ReplaceValue = @"myUser",
+                        SearchToken = @"{{username}}"
+                    },
+                    new SearchReplaceString()
+                    {
+                        ReplaceValue = sqlObject.Name,
+                        SearchToken = @"{{objectname}}"
+                    }
+                };
+
+                headerContent = FileHandler.UpdateTemplateTokens(searchReplaceStrings, headerContent);
+                footerContent = FileHandler.UpdateTemplateTokens(searchReplaceStrings, footerContent);
+
                 var contents = FileHandler.CombineContent(headerContent, objectScript, footerContent);
 
                 FileHandler.SaveFile(fileName, filePath, contents);

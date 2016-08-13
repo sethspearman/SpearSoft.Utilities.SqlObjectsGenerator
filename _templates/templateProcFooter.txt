@@ -1,0 +1,2 @@
+
+-- grant execute on {{objectname}} to {{username}}

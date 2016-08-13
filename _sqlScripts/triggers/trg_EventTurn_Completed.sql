@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.trg_EventTurn_Completed) is not null
+	drop trigger dbo.trg_EventTurn_Completed
+
+
+
+
 
 CREATE TRIGGER [dbo].[trg_EventTurn_Completed] ON [dbo].[tblEventTurns]
     FOR UPDATE
@@ -36,3 +42,5 @@ AS
                 END
         END 
 
+
+-- grant execute on trg_EventTurn_Completed to myUser

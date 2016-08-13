@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_update_usysPivotedScoringData) is not null
+	drop procedure dbo.usp_update_usysPivotedScoringData
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_update_usysPivotedScoringData]
     @EventTurnID INT
 AS 
@@ -54,3 +60,5 @@ AS
     
     END
 
+
+-- grant execute on usp_update_usysPivotedScoringData to myUser

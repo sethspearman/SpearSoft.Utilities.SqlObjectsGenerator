@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_tblJudgeTypes) is not null
+	drop procedure dbo.usp_insert_update_tblJudgeTypes
+
+
+
+
 CREATE PROCEDURE dbo.usp_insert_update_tblJudgeTypes
 	@JudgeTypeID int,
 	@JudgeType nvarchar(50),
@@ -39,3 +45,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_tblJudgeTypes to myUser

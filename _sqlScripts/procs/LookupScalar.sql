@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.LookupScalar) is not null
+	drop procedure dbo.LookupScalar
+
+
+
+
 CREATE PROCEDURE [dbo].[LookupScalar]
     @FieldName VARCHAR(200),
     @TableName VARCHAR(200),
@@ -25,3 +31,5 @@ AS
     END
 
 
+
+-- grant execute on LookupScalar to myUser

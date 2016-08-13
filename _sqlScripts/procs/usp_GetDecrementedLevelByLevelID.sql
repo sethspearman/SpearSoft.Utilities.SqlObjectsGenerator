@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetDecrementedLevelByLevelID) is not null
+	drop procedure dbo.usp_GetDecrementedLevelByLevelID
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetDecrementedLevelByLevelID]
     @ScoringCriteriaTypeID INT, 
     @LevelID INT,
@@ -27,3 +33,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetDecrementedLevelByLevelID to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.GetDayScore1DeductionOnly) is not null
+	drop procedure dbo.GetDayScore1DeductionOnly
+
+
+
+
 
 CREATE PROCEDURE [dbo].[GetDayScore1DeductionOnly] 
 	@EventTurnID INT,
@@ -22,3 +28,5 @@ AS
     END
 
 
+
+-- grant execute on GetDayScore1DeductionOnly to myUser

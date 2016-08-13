@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.FillGrandChampionsTable) is not null
+	drop procedure dbo.FillGrandChampionsTable
+
+
+
+
 -- ==========================================================================================
 -- Author:		Seth Spearman
 -- Create date: 5/30/2008
@@ -33,3 +39,5 @@ AS
     END
 
 
+
+-- grant execute on FillGrandChampionsTable to myUser

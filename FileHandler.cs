@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
+using System.Net;
 using System.Runtime.Remoting.Messaging;
 
 namespace SpearSoft.Utilities.SqlObjectsGenerator
@@ -27,5 +29,16 @@ namespace SpearSoft.Utilities.SqlObjectsGenerator
             var templateFile = ConfigurationManager.AppSettings[$"{type}{headerFooter}"];
             return File.ReadAllText(templateFile);
         }
+
+        public static string UpdateTemplateTokens( List<SearchReplaceString> searchReplaceStrings, string template  )
+        {
+            var newTemplate = template;
+            foreach (var values in searchReplaceStrings)
+            {
+                newTemplate = newTemplate.Replace(values.SearchToken, values.ReplaceValue);
+            }
+            return newTemplate;
+        }
     }
 }
+

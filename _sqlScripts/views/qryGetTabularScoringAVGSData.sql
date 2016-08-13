@@ -1,4 +1,10 @@
 
+
+if object_id(dbo.qryGetTabularScoringAVGSData) is not null
+	drop view dbo.qryGetTabularScoringAVGSData
+
+
+
  
 CREATE	VIEW [dbo].[qryGetTabularScoringAVGSData] 
 AS
@@ -58,3 +64,5 @@ AS
 		) as pvt  
 	    
 
+
+-- grant execute on qryGetTabularScoringAVGSData to myUser

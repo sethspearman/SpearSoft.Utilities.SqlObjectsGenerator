@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetReportLabels) is not null
+	drop procedure dbo.usp_GetReportLabels
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetReportLabels]
     @EventTurnID INT
 AS 
@@ -18,3 +24,5 @@ AS
         ORDER BY jc.[ORDER]
     END
 
+
+-- grant execute on usp_GetReportLabels to myUser

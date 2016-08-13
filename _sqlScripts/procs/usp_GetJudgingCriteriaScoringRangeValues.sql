@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetJudgingCriteriaScoringRangeValues) is not null
+	drop procedure dbo.usp_GetJudgingCriteriaScoringRangeValues
+
+
+
+
 CREATE PROCEDURE usp_GetJudgingCriteriaScoringRangeValues 
                      @JudgingCriteriaID INT,
                      @LevelID INT,
@@ -28,3 +34,5 @@ AS
   END
 
 
+
+-- grant execute on usp_GetJudgingCriteriaScoringRangeValues to myUser

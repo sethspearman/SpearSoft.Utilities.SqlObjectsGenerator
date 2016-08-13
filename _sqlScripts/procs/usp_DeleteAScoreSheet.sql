@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_DeleteAScoreSheet) is not null
+	drop procedure dbo.usp_DeleteAScoreSheet
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_DeleteAScoreSheet]
     @EventPanelTypeID INT,
     @ErrMessage VARCHAR(1000) = '' OUTPUT
@@ -40,3 +46,5 @@ AS
     
     END
 
+
+-- grant execute on usp_DeleteAScoreSheet to myUser

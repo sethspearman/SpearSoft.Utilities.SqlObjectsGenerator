@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetDayScore1PercentPerfection) is not null
+	drop procedure dbo.usp_GetDayScore1PercentPerfection
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetDayScore1PercentPerfection] 
 	@EventTurnID INT,
 	@Result MONEY OUTPUT
@@ -22,3 +28,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetDayScore1PercentPerfection to myUser

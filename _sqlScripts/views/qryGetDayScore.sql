@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.qryGetDayScore) is not null
+	drop view dbo.qryGetDayScore
+
+
+
+
 CREATE VIEW dbo.qryGetDayScore
 AS  SELECT  dbo.tblEventTurns.EventTurnID,
             dbo.tblEventTurnJudge.CompositeScore,
@@ -9,3 +15,5 @@ AS  SELECT  dbo.tblEventTurns.EventTurnID,
             INNER JOIN dbo.tblEventTurnJudge ON dbo.tblEventTurns.EventTurnID = dbo.tblEventTurnJudge.EventTurnID
 
 
+
+-- grant execute on qryGetDayScore to myUser

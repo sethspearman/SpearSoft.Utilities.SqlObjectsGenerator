@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetDiffScore) is not null
+	drop procedure dbo.usp_GetDiffScore
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetDiffScore]
     @JudgingCriteriaID INT,
     @EventTurnJudgeID INT,
@@ -20,3 +26,5 @@ AS
     END
 
 
+
+-- grant execute on usp_GetDiffScore to myUser

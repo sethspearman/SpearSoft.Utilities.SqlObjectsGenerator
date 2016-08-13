@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_GetRuleFromRulebook) is not null
+	drop procedure dbo.usp_GetRuleFromRulebook
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_GetRuleFromRulebook] 
      @LevelID VARCHAR(3)
 	,@Category VARCHAR(25)
@@ -44,3 +50,5 @@ BEGIN
     
 END
 
+
+-- grant execute on usp_GetRuleFromRulebook to myUser

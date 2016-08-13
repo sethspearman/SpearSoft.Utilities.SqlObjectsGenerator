@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_tblScoringCategoryDivisors) is not null
+	drop procedure dbo.usp_insert_update_tblScoringCategoryDivisors
+
+
+
+
 CREATE PROCEDURE dbo.usp_insert_update_tblScoringCategoryDivisors
 	@ScoringCategoryDivisorID int,
     @ScoringCategoryID int,
@@ -35,3 +41,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_tblScoringCategoryDivisors to myUser

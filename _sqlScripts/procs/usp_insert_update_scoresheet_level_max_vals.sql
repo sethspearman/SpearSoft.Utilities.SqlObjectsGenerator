@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_scoresheet_level_max_vals) is not null
+	drop procedure dbo.usp_insert_update_scoresheet_level_max_vals
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_insert_update_scoresheet_level_max_vals]
     @EventPanelTypeID INT,
     @LevelID INT,
@@ -18,3 +24,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_scoresheet_level_max_vals to myUser

@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_ValidateScoresNotNull) is not null
+	drop procedure dbo.usp_ValidateScoresNotNull
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_ValidateScoresNotNull]
     @EventTurnJudgeID INT,
     @HasNulls BIT OUTPUT
@@ -12,3 +18,5 @@ AS
     END
 
 
+
+-- grant execute on usp_ValidateScoresNotNull to myUser

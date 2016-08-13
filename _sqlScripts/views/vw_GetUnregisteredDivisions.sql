@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.vw_GetUnregisteredDivisions) is not null
+	drop view dbo.vw_GetUnregisteredDivisions
+
+
+
+
 CREATE	VIEW [dbo].[vw_GetUnregisteredDivisions] 
 AS
 SELECT DISTINCT rd.DivisionID
@@ -18,3 +24,5 @@ WHERE NOT EXISTS (
 			AND rd2.DivisionID = rd.DivisionID
 		)
 
+
+-- grant execute on vw_GetUnregisteredDivisions to myUser

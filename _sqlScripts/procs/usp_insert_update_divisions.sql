@@ -1,5 +1,11 @@
 
 
+if object_id(dbo.usp_insert_update_divisions) is not null
+	drop procedure dbo.usp_insert_update_divisions
+
+
+
+
 CREATE PROCEDURE [dbo].[usp_insert_update_divisions]
     @DivisionID INT,
     @DivisionName NVARCHAR(50),
@@ -20,3 +26,5 @@ AS
                 
     END
 
+
+-- grant execute on usp_insert_update_divisions to myUser
