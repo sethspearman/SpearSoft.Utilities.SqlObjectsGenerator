@@ -1,6 +1,16 @@
 
-
-if object_id(dbo.{{objectname}}) is not null
-	drop function dbo.{{objectname}}
-
-
+--**** Begin {{objectname}} **********************************************************************************************************************************************
+PRINT N'Creating [dbo].[{{objectname}}]'
+GO
+IF EXISTS
+	(
+	SELECT
+		1
+	FROM
+		sys.objects
+	WHERE
+		(type = 'FN' OR type='TF') AND
+		name = '{{objectname}}'
+	)
+DROP FUNCTION {{objectname}}
+GO

@@ -1,6 +1,17 @@
 
-
-if object_id(dbo.{{objectname}}) is not null
-	drop procedure dbo.{{objectname}}
-
+--**** Begin {{objectname}} *******************************************************************************************************************		
+PRINT N'Creating [dbo].[{{objectname}}]'
+GO
+IF EXISTS
+	(
+	SELECT
+		*
+	FROM
+		sys.objects
+	WHERE
+		type = 'P' AND
+		name = '{{objectname}}'
+	)
+DROP PROCEDURE {{objectname}}
+GO
 

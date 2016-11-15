@@ -12,6 +12,7 @@ namespace SpearSoft.Utilities.SqlObjectsGenerator
         public static void SaveFile(string fileName, string filePath, string content)
         {
             var file = Path.Combine(filePath, fileName);
+            Console.WriteLine(string.Format("Creating {0}", file));
             if (File.Exists(file)) { File.Delete(file); }
             File.AppendAllText(file,content);
         }

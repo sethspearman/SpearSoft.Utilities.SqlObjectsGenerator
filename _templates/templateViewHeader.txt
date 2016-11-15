@@ -1,6 +1,11 @@
 
+--**** Begin {{objectname}} *******************************************************************************************************************
+PRINT N'Creating [dbo].[{{objectname}}]'
+GO
 
-if object_id(dbo.{{objectname}}) is not null
-	drop view dbo.{{objectname}}
-
-
+IF EXISTS (	SELECT 	*
+			FROM		sys.objects
+			WHERE		type = 'V'
+			AND		name = '{{objectname}}')
+	DROP VIEW {{objectname}}
+GO   
