@@ -2,10 +2,10 @@
 --**** Begin {{objectname}} *******************************************************************************************************************
 PRINT N'Creating [dbo].[{{objectname}}]'
 GO
-
-IF EXISTS (	SELECT 	*
-			FROM		sys.objects
-			WHERE		type = 'V'
-			AND		name = '{{objectname}}')
-	DROP VIEW {{objectname}}
+IF EXISTS 	(	SELECT 1
+				FROM sys.objects
+				WHERE type = 'V'
+				AND	name = '{{objectname}}'
+		 	)
+DROP VIEW {{objectname}}
 GO   

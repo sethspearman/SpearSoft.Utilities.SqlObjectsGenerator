@@ -1,6 +1,8 @@
 
+--**** Begin {{objectname}} *******************************************************************************************************************		
+PRINT N'Creating [dbo].[{{objectname}}]'
+GO
 
 if object_id(dbo.{{objectname}}) is not null
 	drop trigger dbo.{{objectname}}
-
-
+GO

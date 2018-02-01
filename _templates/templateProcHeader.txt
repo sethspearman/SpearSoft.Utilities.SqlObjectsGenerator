@@ -2,16 +2,11 @@
 --**** Begin {{objectname}} *******************************************************************************************************************		
 PRINT N'Creating [dbo].[{{objectname}}]'
 GO
-IF EXISTS
-	(
-	SELECT
-		*
-	FROM
-		sys.objects
-	WHERE
-		type = 'P' AND
-		name = '{{objectname}}'
-	)
+IF EXISTS 	(	SELECT 1
+				FROM sys.objects
+				WHERE type = 'P' 
+				AND name = '{{objectname}}'
+			)
 DROP PROCEDURE {{objectname}}
 GO
 

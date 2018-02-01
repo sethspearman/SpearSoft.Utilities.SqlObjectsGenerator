@@ -2,15 +2,10 @@
 --**** Begin {{objectname}} **********************************************************************************************************************************************
 PRINT N'Creating [dbo].[{{objectname}}]'
 GO
-IF EXISTS
-	(
-	SELECT
-		1
-	FROM
-		sys.objects
-	WHERE
-		(type = 'FN' OR type='TF') AND
-		name = '{{objectname}}'
-	)
+IF EXISTS	(	SELECT 1
+				FROM sys.objects
+				WHERE (type = 'FN' OR type='TF') 
+				AND name = '{{objectname}}'
+			)
 DROP FUNCTION {{objectname}}
 GO
